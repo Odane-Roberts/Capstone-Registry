@@ -1,0 +1,11 @@
+  registry:
+    build:
+      context: ./registry
+      dockerfile: Dockerfile
+    ports:
+      - "8761:8761"
+    networks:
+     - my_network  
+networks:
+  my_network:
+    driver: bridge
